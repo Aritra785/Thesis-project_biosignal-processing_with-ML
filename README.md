@@ -490,17 +490,6 @@ Several directions remain for future development:
 -Exploring real-time implementation  
 -Developing wearable implementations for practical gesture recognition  
 
-## Citation
-
-If you use this work, please cite:
-
-@article{bol2026semg,
-  title={sEMG-Based Non-Invasive Gesture Recognition for Bangla Sign Language},
-  author={Bol, Pritam and Sarkar, Aritra and Mahmud, Fahim and Chowdhury, Aditta},
-  journal={Advances in Human-Computer Interaction},
-  year={2026}
-
-
 
 ### Authors & Supervision
 
