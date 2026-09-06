@@ -331,7 +331,7 @@ EMG signals are weak bioelectrical signals and can be affected by various source
 During data acquisition, appropriate signal conditioning and filtering were applied using the BIOPAC MP36 system to improve the quality of the recorded EMG signals.
 
 The preprocessing pipeline consists of:
-
+```text
 Recorded sEMG
      │
      ▼
@@ -345,7 +345,7 @@ Gesture Segmentation
      │
      ▼
 Clean sEMG Signal
-
+```
 
 ## Filtering
 
