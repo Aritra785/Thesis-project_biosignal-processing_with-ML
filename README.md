@@ -14,10 +14,11 @@ Unlike camera-based approaches, sEMG captures the electrical activity generated 
 
 The resulting feature space is reduced using multiple feature-selection techniques and evaluated with four tree-based machine learning classifiers.
 
+## Methodology
+
 The overall pipeline is:
 
-
-
+```text
 sEMG Signals
      │
      ▼
@@ -70,7 +71,6 @@ Hyperparameter Optimization
      │
      ▼
 Final Model Evaluation
-
 
 
 ## Research Objective
@@ -395,19 +395,19 @@ The initial feature matrix contains 240 features.
 
 Using all features can increase model complexity and computational requirements. Therefore, four feature-selection approaches are investigated:
 
-# Recursive Feature Elimination (RFE)
+## Recursive Feature Elimination (RFE)
 
 RFE iteratively eliminates less important features based on the importance provided by a trained estimator.
 
-# Mutual Information
+## Mutual Information
 
 Mutual Information evaluates the amount of information shared between a feature and the target class.
 
-# ANOVA F-Test
+## ANOVA F-Test
 
 ANOVA F-Test evaluates the discriminative ability of individual features by comparing between-class and within-class variation.
 
-# LASSO-CV
+## LASSO-CV
 
 LASSO uses L1 regularization to shrink less informative feature coefficients toward zero, with cross-validation used to determine the regularization strength.
 
@@ -435,7 +435,7 @@ The goal is to obtain a compact feature representation without unnecessarily sac
 
 Each classifier is evaluated using its corresponding selected feature set.
 
-# The Extra Trees classifier produced the strongest performance in the evaluated experiments, achieving **95.56% accuracy using 31 selected features**.
+## The Extra Trees classifier produced the strongest performance in the evaluated experiments, achieving **95.56% accuracy using 31 selected features**.
 
 ## Results
 
@@ -465,28 +465,28 @@ Performance:
 
 ## Key Findings
 A multi-channel sEMG-based pipeline was developed for Bangla Sign Language gesture recognition.
-240 features were extracted from four sEMG channels.
-Four feature-selection techniques were investigated.
-Feature sets were evaluated using 5-fold cross-validation.
-Four tree-based classifiers were compared.
-Extra Trees achieved the best final accuracy of 95.56%.
-The best Extra Trees configuration required only 31 features, substantially reducing the original 240-dimensional feature space.
-The classification framework uses only sEMG signals without additional IMU or motion sensors.
+-240 features were extracted from four sEMG channels.  
+-Four feature-selection techniques were investigated.  
+-Feature sets were evaluated using 5-fold cross-validation.  
+-Four tree-based classifiers were compared.  
+-Extra Trees achieved the best final accuracy of 95.56%.  
+-The best Extra Trees configuration required only 31 features, substantially reducing the original 240-dimensional feature space.  
+-The classification framework uses only sEMG signals without additional IMU or motion sensors.  
 
 
 ## Limitations and Future Work
 
-The current study focuses on static Bangla Sign Language vowel gestures.
+The current study focuses on static Bangla Sign Language vowel gestures.  
 
-Several directions remain for future development:
+Several directions remain for future development:  
 
-Evaluation of the recorded dynamic gestures
-Increasing the number of participants
-Increasing gesture vocabulary
-Evaluating inter-subject generalization
-Investigating deep learning approaches
-Exploring real-time implementation
-Developing wearable implementations for practical gesture recognition
+-Evaluation of the recorded dynamic gestures    
+-Increasing the number of participants  
+-Increasing gesture vocabulary  
+-Evaluating inter-subject generalization  
+-Investigating deep learning approaches  
+-Exploring real-time implementation  
+-Developing wearable implementations for practical gesture recognition  
 
 ## Citation
 
@@ -503,14 +503,14 @@ If you use this work, please cite:
 ### Authors & Supervision
 
 **Aritra Sarkar** and **Pritam Bol**  
-*Under the supervision of Fahim Mahmud*
-Department of Electrical & Electronic Engineering
-Chittagong University of Engineering & Technology (CUET), Bangladesh
+*Under the supervision of Fahim Mahmud*  
+Department of Electrical & Electronic Engineering  
+Chittagong University of Engineering & Technology (CUET), Bangladesh  
 
-Contributors:
-** Aditta Chowdhury **
-Department of Electrical & Electronic Engineering
-Chittagong University of Engineering & Technology (CUET), Bangladesh
+Contributors:  
+ Aditta Chowdhury  
+Department of Electrical & Electronic Engineering  
+Chittagong University of Engineering & Technology (CUET), Bangladesh  
 ## Acknowledgment
 
 The implementation of this project was supported by the Biomedical Engineering Laboratory at Chittagong University of Engineering & Technology.
